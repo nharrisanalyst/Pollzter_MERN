@@ -38,7 +38,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'voting-client/build')));
 
 app.use(passport.initialize());
-app.use('/', index);
+
 app.use('/',login_register);
 app.use('/users', users);
 app.use('/api',api);
@@ -48,7 +48,11 @@ app.use('/api',answers);
 app.use('/api',questions);
 app.use('/poll/api',getpoll);
 app.use('/dashboard/poll/api',getpoll);
-
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
