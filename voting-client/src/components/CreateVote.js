@@ -4,9 +4,11 @@ import React, { Component } from 'react';
 
 
 
-const CreateVote = ({submit, addQuestion, deleteQuestion, answers}) =>{
+const CreateVote = ({submit, addQuestion, deleteQuestion, answers, path}) =>{
     let input = {};
     console.log(answers);
+    console.log('match');
+    console.log(path);
 
     let answerForm = answers.map((val,i)=>{
         let answerId = 'answer'+i
@@ -25,11 +27,11 @@ const CreateVote = ({submit, addQuestion, deleteQuestion, answers}) =>{
      let answers = []
      for(var i in input){ if(i !='question') answers.push(input[i].value)}
 
-     submit({question:input.question.value, answers:answers})
+     submit({question:input.question.value, answers:answers, path:path})
    }}>
    <br/>
     Question:
-    
+
     <br/>
     <input className='input-text' placeholder='Question:' type= 'text' ref={node => input.question = node}/>
        {answerForm}

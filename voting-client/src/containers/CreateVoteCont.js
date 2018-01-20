@@ -4,10 +4,11 @@ import CreateVote from '../components/CreateVote';
 
 
 
-const mapStateToProps = (state)=>{
+const mapStateToProps = (state, ownProps)=>{
   return{
     question: state.makePoll.question,
-    answers: state.makePoll.answers
+    answers: state.makePoll.answers,
+    path: ownProps.match.path
 
   }
 }

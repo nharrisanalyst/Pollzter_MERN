@@ -193,11 +193,13 @@ div.dashboard-question:hover{
 }
 
 .create-cont{
-  width:100%;
+  width:25%;
+  float:right;
+  clear:both;
 }
 
 .create-quest{
-  width:25%;
+  width:80%;
   min-height:50px;
   margin: 0 auto;
   text-align: center;

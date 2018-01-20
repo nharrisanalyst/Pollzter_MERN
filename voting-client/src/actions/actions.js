@@ -338,7 +338,7 @@ function getQuestions(){
 //   router:{location:null}
 // }
 
-function newQuestionWAnswers({question,answers}){
+function newQuestionWAnswers({question,answers, path}){
   return function(dispatch,getState){
       // const question = getState().makePoll.question;
       //
@@ -370,7 +370,10 @@ function newQuestionWAnswers({question,answers}){
         res=> res.json(),
         err=>console.log(err)
       ).then(res=>{
-        if(res.success){dispatch(push(`/dashboard/${user}`))}}
+        console.log(res)
+        if(res.success && !path.includes('dashboard')){dispatch(push(`/dashboard/${user}`))}
+        if(res.success && path.includes('dashboard')){dispatch(getQuestions())}
+      }
       )
 
 

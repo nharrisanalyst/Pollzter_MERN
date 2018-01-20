@@ -43,6 +43,7 @@ app.use('/',login_register);
 app.use('/users', users);
 app.use('/api',api);
 app.use('/api',createVote);
+app.use('/dashboard/api',createVote);
 app.use('/poll/api', vote);
 app.use('/api',answers);
 app.use('/api',questions);

@@ -9,7 +9,8 @@ function mapStateToProps(state, ownProps) {
     user: ownProps.match.params.user,
     questions:state.questions.questions,
     gettingQuestions: state.questions.gettingQuestions,
-    gotQuestions: state.questions.gotQuestion
+    gotQuestions: state.questions.gotQuestion,
+    path:ownProps.match.path
   };
 }
 
@@ -22,6 +23,7 @@ function mapDispatchToProps(dispatch){
    }
 
 }
+
 
 
 const DashBoardCont=connect(

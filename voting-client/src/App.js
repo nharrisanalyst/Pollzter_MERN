@@ -22,6 +22,7 @@ import VoteCont from './containers/VoteCont';
 import UserCont from './containers/UserCont';
 import AppFooter from './components/AppFooter';
 import {loadState, saveState} from './localStorage';
+import {Link} from 'react-router-dom';
 //creating store and applyng middlware
 // router historymiddleware
 //creating enhanced history
@@ -61,16 +62,19 @@ class App extends Component {
            <Redirect to="/login"/>
          ) : (  <div>
                 <UserCont/>
+                <Link className='create-new' to="/newpoll">Create A New Poll</Link>
+                <CreateVoteCont {...routePaths}/>
                  <DashBoardCont {...routePaths} />
+
                  </div>
                 )
                )}/>
-          <Route exact path="/newpoll" render={() => (
+          <Route exact path="/newpoll" render={routePaths=> (
                 //requireAuth()
                 requireAuth()? (
              <Redirect to="/login"/>
                 ) : (
-                      <CreateVoteCont/>
+                      <CreateVoteCont {...routePaths}/>
                       )
                     )}/>
         <Route exact path='/poll/:id' render={routePaths=>(<VoteCont {...routePaths}/>)} />

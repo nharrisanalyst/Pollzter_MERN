@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 import {RotateLoader} from 'react-spinners';
 import ShowVotesCont from '../containers/ShowVotesCont';
 //const DashBoard = ({user}) =>{
@@ -21,9 +21,11 @@ class DashBoard extends Component{
        super(props)
      }
   componentDidMount(){
-    const {user, setUp} = this.props;
+    const {user, setUp, path} = this.props;
      setUp(user);
     console.log(user);
+    console.log('params');
+    console.log(path);
 
 
 
@@ -44,7 +46,7 @@ class DashBoard extends Component{
     let Questions = questions.length===0?gettingQuestions?null:<div id='dashboard-noQuestions-cont'><h3 className='dashboard-noQuestions'> You have not created any Polls<p></p> Click on the Create a New Poll Link to Create Your first Poll</h3></div>:QuestionList;
 
   return(  <div className='dashBoard'>
-     <Link className='create-new' to="/newpoll">Create A New Poll</Link>
+
      {Questions}
 
 
