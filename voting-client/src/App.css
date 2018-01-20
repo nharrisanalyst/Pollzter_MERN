@@ -1,0 +1,475 @@
+html{
+  background-color:#f7f8f9;
+
+}
+body{
+  margin-top: 35px;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+#header{
+  width:100%;
+  min-height:30px;
+  font-size: 18pt;
+  background-color:#e0f4f9;
+  border-bottom: 1px solid #c5e6f7;
+  display:block;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 1000;
+
+}
+
+.headerEl{
+  display: inline-block;
+  font-family: 'Playfair Display', serif;
+  color:black;
+
+}
+
+#dashBoard{
+  width:100%;
+}
+
+.dashboard-question{
+   width:50%;
+   min-height:65px;
+   margin: 0 auto;
+   border-width:1px;
+   border-color:black;
+   border: solid 1px rgb(230, 236, 240);
+   color:gb(26, 13, 171);
+   text-align: center;
+   vertical-align: middle;
+   line-height: 30px;
+   cursor: pointer;
+   background-color: white;
+   display:block;
+   font-family: 'Playfair Display', serif;
+
+
+}
+
+
+div.dashBoard:first-child{
+  border-top: 1px solid  rgb(230, 236, 240);
+}
+
+div.dashboard-question:nth-child(odd) {
+    border: 1px solid rgb(230, 236, 240);
+    border-top: none;
+    border-bottom:none;
+}
+
+div.dashboard-question:nth-child(even) {
+    border-bottom: 1px solid rgb(230, 236, 240);
+}
+
+
+div.dashboard-question:first-child {
+    border-top: 1px solid rgb(230, 236, 240);
+}
+
+div.dashboard-question:last-of-type {
+    border-bottom: 1px solid rgb(230, 236, 240);
+}
+
+div.dashboard-question:hover{
+  color: #4fcaff;
+
+}
+
+
+
+.dashBoard{
+  margin-top:10px;
+  z-index:999;
+}
+
+#logInRegester{
+  float:right;
+  margin-right: 10px;
+  vertical-align: bottom;
+  margin-top:5px;
+}
+
+
+#loginFormCont{
+  width:100%;
+
+
+}
+
+.loginForm{
+  width:25%;
+  min-height:50px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid rgb(230, 236, 240);
+
+  background-color: white;
+  font-family: 'Playfair Display', serif;
+
+  }
+
+ #register-Div-Con{
+   width:100%;
+ }
+
+ #register-Div{
+   width:25%;
+   min-height:50px;
+   margin: 0 auto;
+   text-align: center;
+   border: 1px solid rgb(230, 236, 240);
+
+   background-color: white;
+   font-family: 'Playfair Display', serif;
+ }
+
+ .question-link{
+    font-size:8pt;
+    color: black;
+
+ }
+
+ .input-text{
+   height:25px;
+   width:150px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   border:2px solid rgb(170, 174, 175);
+ }
+
+ .submit-button{
+   border:1px solid rgb(205, 212, 216);
+   margin-bottom:5px;
+ }
+
+.register-el{
+   color:black;
+
+
+}
+.create-new{
+  color:black;
+  font-family: 'Playfair Display', serif;
+  clear:both;
+  margin-top:5px;
+  margin-left:10px;
+  float: left;
+  display: inline-block;
+  position: relative;
+}
+
+.create-cont{
+  width:100%;
+}
+
+.create-quest{
+  width:25%;
+  min-height:50px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid rgb(230, 236, 240);
+  margin-top: 10px;
+  background-color: white;
+  font-family: 'Playfair Display', serif;
+
+
+}
+
+.pollzter-main{
+  font-family: 'Playfair Display', serif;
+  margin-left:10px;
+}
+
+.header-link{
+  font-size: 15pt;
+  min-height:30px;
+
+}
+
+.vote-button{
+  color:#4fcaff;
+  cursor: pointer;
+  border:1px solid #4fcaff;
+  margin-bottom:5px;
+  border-radius:10px;
+  font-family: 'Playfair Display', serif;
+  background-color: white;
+  height:30px;
+  vertical-align: middle;
+  line-height: 30px;
+
+
+}
+.vote-button:hover{
+  color:black;
+  border:1px solid black;
+}
+
+.vote-form{
+  text-align: center;
+  margin:0 auto;
+  max-width:60%;
+  margin-top:5px;
+
+
+
+}
+.vote-form-cont{
+  width:100%;
+}
+
+.chart-result-cont{
+
+}
+
+
+
+.chart-result{
+  text-align: center;
+  margin: 0 auto;
+}
+
+#dashboard-noQuestions-cont{
+  width:100%;
+}
+
+.dashboard-noQuestions{
+  width:50%;
+  height:200px;
+  margin-left:20px;
+  text-align:center;
+  margin: 0 auto;
+}
+
+#homepage-main-header{
+  text-align:center;
+  font-family: 'Playfair Display', serif;
+  font-size: 55px;
+  margin-bottom:5px;
+
+}
+
+.homepage-second-block{
+
+  height:150px;
+  text-align:center;
+  width:100%;
+  background-color:#c4dcf2;
+  margin:0 auto;
+  display: flex;
+  justify-content: center;
+  vertical-align: bottom;
+}
+
+.hompage-links-div{
+  width:200px;
+  background-color:#c4dcf2;
+
+
+
+  position:relative;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 115px;
+
+}
+
+
+
+a.hompage-links{
+  width:200px;
+  font-size:25pt;
+  color:black;
+  font-family: 'Playfair Display', serif;
+  position:absolute;
+  vertical-align: center;
+  left:0;
+  text-align:center;
+  margin-bottom: 20px;
+
+
+}
+
+a.hompage-links:hover{
+  color:blue;
+
+}
+#homepage-login{
+  margin-right:10px;
+}
+
+#homepage-main-div{
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  margin: 0 auto;
+  text-align:center;
+
+}
+
+#homepage-main-text{
+  font-size:18pt;
+  max-width:80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom:75px;
+}
+
+h3#homepage-main-tagline{
+  margin:20px 0px 20px 0px;
+  color:#4EB1BA;
+}
+
+.app-footer{
+
+
+  height:30px;
+  background-color: #4ea5e8;
+  width:100%;
+  font-family: 'Playfair Display', serif;
+  flex: 1;
+
+  }
+
+.app-footer-text{
+  display: inline-block;;
+}
+#footer-viz{
+  float:right;
+  margin-right:5px;
+}
+
+#footer-company{
+  float:left;
+  width: 85px;
+  display:block;
+
+
+}
+
+.homepage-third-block{
+  text-align:center;
+}
+
+
+
+#homepage-third-header{
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  text-align:center;
+  color:#409eef;
+
+}
+
+#main-wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 65px);
+}
+
+.homepage-third-div{
+  display:inline-block;
+  width:200px;
+  font-family: 'Playfair Display', serif;
+
+  height:200px;
+  margin-right:25px;
+  font-size: 15pt;
+  vertical-align: top;
+
+}
+
+/*em{
+  color:#409eef;
+}*/
+
+#unauthorized-message{
+  width:20%;
+  background-color: red;
+  text-align:center;
+  margin: 0 auto;
+  margin-top:10px;
+
+}
+
+#logOut-header{
+  text-decoration: underline;
+}
+
+#logOut-header:hover{
+  cursor: pointer;
+}
+
+.user-profile{
+  margin-top:10px;
+  font-family: 'Playfair Display', serif;
+  width:150px;
+  height:90px;
+  background-color: white;
+  margin-left:10px;
+  float:left;
+  z-index:200;
+  border: 1px solid  rgb(230, 236, 240);
+}
+
+.user-profile-text{
+  margin-bottom:7px;
+  margin-left:5px;
+  margin-top:5px;
+
+}
+span{
+  font-weight: bold;
+}
+
+#poll-number-id{
+  color:#c5e6f7;
+
+}
+
+#pollzter-main-link{
+  text-decoration: none;
+}
+
+#pollzter-footer-link{
+  text-decoration: none;
+  color:black;
+  margin-left:10px;
+}
+
+#app-footer-indViz{
+  color:black;
+}
