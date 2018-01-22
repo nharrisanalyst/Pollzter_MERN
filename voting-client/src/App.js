@@ -42,12 +42,15 @@ store.subscribe(()=>{
 
 //checking authorization
 function requireAuth(routePaths){
+  console.log('here');
+  console.log(routePaths.match.params.user);
   let test =!sessionStorage.getItem('JWT');
       test =!(store.getState().loggedIn.userName===routePaths.match.params.user)
       if(test){store.dispatch(logOutThunk())}
     return  test;
 
 }
+
 
 
 class App extends Component {
@@ -76,7 +79,7 @@ class App extends Component {
                )}/>
           <Route exact path="/newpoll" render={routePaths=> (
                 //requireAuth()
-                requireAuth(routePaths)? (
+                requireAuth({match:{params:{user:store.getState().loggedIn.userName}}})? (
              <Redirect to="/login"/>
                 ) : (
                       <CreateVoteCont {...routePaths}/>
