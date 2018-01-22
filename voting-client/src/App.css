@@ -308,10 +308,14 @@ div.dashboard-question:hover{
   display: flex;
   justify-content: center;
   vertical-align: bottom;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .hompage-links-div{
-  width:200px;
+  max-width:200px;
+  min-width:150px;
   background-color:#c4dcf2;
 
 
@@ -326,7 +330,8 @@ div.dashboard-question:hover{
 
 
 a.hompage-links{
-  width:200px;
+  max-width:200px;
+  min-width:150px;
   font-size:25pt;
   color:black;
   font-family: 'Playfair Display', serif;
