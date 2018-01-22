@@ -71,7 +71,7 @@ class App extends Component {
          ) : (  <div>
                 <UserCont/>
                 <Link className='create-new' to="/newpoll">Create A New Poll</Link>
-                <CreateVoteCont {...routePaths}/>
+              <div id='dashboard-createvote'>  <CreateVoteCont {...routePaths}/></div>
                  <DashBoardCont {...routePaths} />
 
                  </div>

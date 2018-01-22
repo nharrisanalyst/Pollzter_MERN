@@ -71,6 +71,7 @@ body{
 
 .dashboard-question{
    width:50%;
+   min-width:300px;
    min-height:65px;
    margin: 0 auto;
    border-width:1px;
@@ -215,6 +216,7 @@ div.dashboard-question:hover{
 
 .create-quest{
   width:80%;
+  min-width:165px;
   min-height:50px;
   margin: 0 auto;
   text-align: center;
@@ -495,4 +497,47 @@ span{
 
 #app-footer-indViz{
   color:black;
+}
+
+
+/*css for mobile devices*/
+
+@media(max-width:500px){
+   #dashboard-createvote{
+     display:none;
+   }
+  .user-profile{
+   width:100%;
+   margin-left:0;
+   margin-top:0;
+   height:25px;
+   position: fixed;
+   top:35px;
+   left:0;
+   z-index: 1000;
+   }
+   .user-profile-text{
+     margin-bottom:0;
+     margin-top:0;
+     margin-right:2px;
+     display:inline-block;
+     font-size:12px;
+
+   }
+   .create-new{
+     display:block;
+     float:none;
+     text-align: center;
+   }
+   body{
+     margin-top: 60px;
+   }
+
+   .create-cont{
+     float:none;
+     text-align:center;
+     width: 100%;
+   }
+
+
 }
