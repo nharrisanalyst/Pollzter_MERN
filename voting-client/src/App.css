@@ -9,7 +9,7 @@ body{
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
    width:100%;
-   
+
    padding:0;
 
 }
@@ -144,6 +144,7 @@ div.dashboard-question:hover{
 
 .loginForm{
   width:25%;
+  min-width:177.750px;
   min-height:50px;
   margin: 0 auto;
   text-align: center;
@@ -160,6 +161,7 @@ div.dashboard-question:hover{
 
  #register-Div{
    width:25%;
+   min-width:177.750px;
    min-height:50px;
    margin: 0 auto;
    text-align: center;
