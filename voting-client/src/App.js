@@ -23,6 +23,7 @@ import UserCont from './containers/UserCont';
 import AppFooter from './components/AppFooter';
 import {loadState, saveState} from './localStorage';
 import {Link} from 'react-router-dom';
+import {logOutThunk} from './actions/actions';
 //creating store and applyng middlware
 // router historymiddleware
 //creating enhanced history
@@ -40,8 +41,12 @@ store.subscribe(()=>{
 })
 
 //checking authorization
-function requireAuth(){
-   return !sessionStorage.getItem('JWT')
+function requireAuth(routePaths){
+  let test =!sessionStorage.getItem('JWT');
+      test =!(store.getState().loggedIn.userName===routePaths.match.params.user)
+      if(test){store.dispatch(logOutThunk())}
+    return  test;
+
 }
 
 
@@ -58,7 +63,7 @@ class App extends Component {
       //requireAuth()
         <Route exact path='/' component = {HomePage} />
         <Route exact path="/dashboard/:user" render={routePaths => (
-             requireAuth()? (
+             requireAuth(routePaths)? (
            <Redirect to="/login"/>
          ) : (  <div>
                 <UserCont/>
@@ -71,7 +76,7 @@ class App extends Component {
                )}/>
           <Route exact path="/newpoll" render={routePaths=> (
                 //requireAuth()
-                requireAuth()? (
+                requireAuth(routePaths)? (
              <Redirect to="/login"/>
                 ) : (
                       <CreateVoteCont {...routePaths}/>
