@@ -440,6 +440,7 @@ h3#homepage-main-tagline{
 
 #unauthorized-message{
   width:20%;
+  min-width:150px;
   background-color: red;
   text-align:center;
   margin: 0 auto;
