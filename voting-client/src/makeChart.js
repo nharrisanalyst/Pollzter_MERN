@@ -1,14 +1,16 @@
 import * as d3Select from 'd3-selection';
 import * as d3Scale from 'd3-scale';
 import * as d3Axis from 'd3-axis';
+import * as size from 'window-size';
 
 
 
  export default function makeChart(answers, id){
-
+    console.log('size')
+    console.log(size)
   let margin ={t:10, r:45, b:25,l:75};
-  let w =420-margin.l-margin.r;
-  let h=250-margin.t-margin.b;
+  let w =window.innerWidth<=500? 280-margin.l-margin.r:420-margin.l-margin.r;
+  let h=window.innerWidth<=500?175-margin.t-margin.b:250-margin.t-margin.b;
 
     var svg = d3Select.select(id).append('svg').attr('width',w+margin.l+margin.r).attr('height',h+margin.t+margin.b);
     var graph = svg.append('g').attr('width',w).attr('heigth',h).attr("transform", "translate(" + margin.l + "," + margin.t + ")");
