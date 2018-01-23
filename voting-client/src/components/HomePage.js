@@ -8,7 +8,7 @@ const HomePage = ()=> (
     <div id='homepage-main-div'>
     <h1 id='homepage-main-header'>Pollzter</h1>
     <h3 id='homepage-main-tagline'> Find Insight Anywhere</h3>
-    <div id='homepage-main-text'>Pollzter is an application that allows businesses, indivduals, and users to receive direct insight and feedback through polling that can be shared anywhere with one simple link.</div>
+    <div id='homepage-main-text'>Pollzter is a service that allows businesses, indivduals, and users to receive direct insight and feedback through polling that can be shared anywhere with one simple link.</div>
     </div>
     <div className='homepage-second-block'>
     <div id='homepage-login' className='hompage-links-div'>
