@@ -46,7 +46,7 @@ const HomePage = ()=> (
           <em>4.</em>
           <p></p>
           <div className='homepage-third-text-text'>
-        Track all your polls with our costume designed dashboard
+        Track all your polls with our specially designed dashboard
         </div>
           </div>
 
